@@ -1,5 +1,12 @@
+import MainBanner from './components/mainBanner';
+
 function App() {
-	return <h1>Hello world</h1>;
+	return (
+		<div>
+			<MainBanner />
+			<h1>Hello world</h1>
+		</div>
+	);
 }
 
 export default App;
