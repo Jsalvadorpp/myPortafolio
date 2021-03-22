@@ -65,7 +65,7 @@ export default function MainBanner() {
 			<Particles className={classes.particles} params={particlesParams} />
 			<div className={classes.bannerContent}>
 				<Fade top>
-					<h1 className={classes.myName}>HI, I'M JOSE SALVADOR</h1>
+					<h1 className={classes.myName}>HI, I'M JOSÉ SALVADOR</h1>
 				</Fade>
 
 				<h4 className={classes.title}>
