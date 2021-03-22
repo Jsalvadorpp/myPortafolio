@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
-import * as Ui from '@material-ui/core';
-import * as Icon from '@material-ui/icons';
+//import * as Ui from '@material-ui/core';
+//import * as Icon from '@material-ui/icons';
 import Particles from 'react-particles-js';
 import Typed from 'react-typed';
 import Fade from 'react-reveal/Fade';
@@ -32,7 +32,8 @@ const useStyles = makeStyles({
 	myName: {
 		fontSize: '3.5rem',
 		marginBottom: '30px',
-		letterSpacing: '2.5px'
+		letterSpacing: '2.5px',
+		padding: '0 30px'
 	},
 	title: {}
 });
@@ -64,14 +65,14 @@ export default function MainBanner() {
 			<Particles className={classes.particles} params={particlesParams} />
 			<div className={classes.bannerContent}>
 				<Fade top>
-					<h1 className={classes.myName}>HI , I'M JOSE SALVADOR</h1>
+					<h1 className={classes.myName}>HI, I'M JOSE SALVADOR</h1>
 				</Fade>
 
 				<h4 className={classes.title}>
 					<Typed
 						strings={[ 'Front End Developer', 'Back End Developer', 'Full Stack Developer | MERN STACK' ]}
 						typeSpeed={50}
-						backSpeed={70}
+						backSpeed={75}
 					/>
 				</h4>
 			</div>

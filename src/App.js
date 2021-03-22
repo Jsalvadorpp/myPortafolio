@@ -1,6 +1,8 @@
-import MainBanner from './components/mainBanner';
 import Particles from 'react-particles-js';
 import { makeStyles } from '@material-ui/styles';
+//import components
+import MainBanner from './components/mainBanner';
+import AboutMe from './components/aboutMe';
 
 const useStyles = makeStyles({
 	rootWrapper: {
@@ -64,7 +66,7 @@ function App() {
 		<div className={classes.rootWrapper}>
 			<Particles params={particlesParams} className={classes.particles} />
 			<MainBanner />
-			<h1 style={{ paddingBottom: '200px' }}>Hello world</h1>
+			<AboutMe />
 		</div>
 	);
 }
