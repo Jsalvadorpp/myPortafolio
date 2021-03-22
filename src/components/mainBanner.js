@@ -71,8 +71,8 @@ export default function MainBanner() {
 				<h4 className={classes.title}>
 					<Typed
 						strings={[ 'Front End Developer', 'Back End Developer', 'Full Stack Developer | MERN STACK' ]}
-						typeSpeed={50}
-						backSpeed={75}
+						typeSpeed={22}
+						backSpeed={34}
 					/>
 				</h4>
 			</div>

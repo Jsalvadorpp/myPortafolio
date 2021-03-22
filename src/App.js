@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/styles';
 //import components
 import MainBanner from './components/mainBanner';
 import AboutMe from './components/aboutMe';
+import NavBar from './components/navbar';
 
 const useStyles = makeStyles({
 	rootWrapper: {
@@ -65,6 +66,8 @@ function App() {
 	return (
 		<div className={classes.rootWrapper}>
 			<Particles params={particlesParams} className={classes.particles} />
+
+			<NavBar />
 			<MainBanner />
 			<AboutMe />
 		</div>
