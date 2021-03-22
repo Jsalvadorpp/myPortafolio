@@ -3,3 +3,9 @@ body {
 	background: #02021e;
 	color: white;
 }
+.divider {
+	width: 120px;
+	height: 2px;
+	background-color: #6c63ff;
+	margin: 20px 0;
+}
