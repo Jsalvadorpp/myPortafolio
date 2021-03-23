@@ -35,7 +35,9 @@ const useStyles = makeStyles({
 		letterSpacing: '2.5px',
 		padding: '0 30px'
 	},
-	title: {}
+	title: {
+		color: '#ccccd2'
+	}
 });
 
 const particlesParams = {

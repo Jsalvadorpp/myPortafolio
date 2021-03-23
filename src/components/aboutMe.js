@@ -27,7 +27,7 @@ export default function AboutMe() {
 
 					<div className="divider" />
 
-					<p>
+					<p style={{ color: '#ccccd2' }}>
 						Enthusiastic full Stack developer that uses mainly Javascript, Node.js, Express.js, React.js and
 						MongoDb, i'm a person that loves coding. From a young age I was always fascinated with
 						technology. I started studying electronic engineering but during my college studies I found my
