@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import * as Ui from '@material-ui/core';
 import * as Icon from '@material-ui/icons';
+import { Link } from 'react-scroll';
 
 const useStyles = makeStyles({
 	navbar: {
@@ -22,8 +23,17 @@ const useStyles = makeStyles({
 			border: '1px solid white',
 			borderRadius: '25px',
 			transition: '0.2s',
-			cursor: 'pointer'
+			cursor: 'pointer',
+			color: 'white'
+		},
+		color: 'white',
+		textDecoration: 'none',
+		'&.active': {
+			color: 'red'
 		}
+	},
+	sectionItem_active: {
+		color: 'red'
 	},
 	icon: {
 		'&:hover': {
@@ -36,14 +46,18 @@ export default function Navbar() {
 	const classes = useStyles();
 
 	return (
-		<Ui.AppBar position="absolute" className={classes.navbar}>
+		<Ui.AppBar position="fixed" className={classes.navbar}>
 			<Ui.Toolbar>
 				<div className="d-flex align-items-center justify-content-between w-100">
 					<ul className={classes.sectionsLinks}>
-						<li className={classes.sectionItem}>Home</li>
-						<li className={classes.sectionItem}>About</li>
-						<li className={classes.sectionItem}>Projects</li>
-						<li className={classes.sectionItem}>Contact</li>
+						<Link className={classes.sectionItem} to={'top'} activeClass="active" spy={true}>
+							Home
+						</Link>
+						<Link className={classes.sectionItem} to={'about'} activeClass="active" spy={true} offset={-60}>
+							About
+						</Link>
+						<Link className={classes.sectionItem}>Projects</Link>
+						<Link className={classes.sectionItem}>Contact</Link>
 					</ul>
 					<div>
 						<Ui.IconButton

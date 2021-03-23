@@ -66,10 +66,12 @@ function App() {
 	return (
 		<div className={classes.rootWrapper}>
 			<Particles params={particlesParams} className={classes.particles} />
-
+			<div id="top" style={{ height: '20px', position: 'sticky' }} />
 			<NavBar />
 			<MainBanner />
 			<AboutMe />
+
+			<div style={{ height: '500px' }} />
 		</div>
 	);
 }

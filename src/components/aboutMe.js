@@ -18,7 +18,7 @@ export default function AboutMe() {
 	const classes = useStyles();
 
 	return (
-		<div className={classes.aboutSection}>
+		<div className={classes.aboutSection} id="about">
 			<div className="row">
 				<div className="col-lg-6">
 					<h1 className="mb-0">
