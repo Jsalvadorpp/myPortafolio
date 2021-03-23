@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/styles';
 import * as Ui from '@material-ui/core';
 import * as Icon from '@material-ui/icons';
@@ -56,7 +56,6 @@ const useStyles = makeStyles({
 	},
 	navbarContent: {
 		display: 'flex',
-		justifyContent: 'items-center',
 		justifyContent: 'space-between',
 		width: '100%',
 		flexWrap: 'wrap',
