@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/styles';
 import * as Ui from '@material-ui/core';
 import * as Icon from '@material-ui/icons';
@@ -7,14 +7,26 @@ import { Link } from 'react-scroll';
 const useStyles = makeStyles({
 	navbar: {
 		backgroundColor: '#6c63ff00',
-		color: 'white'
+		color: 'white',
+		transition: '0.6s',
+		transitionTimingFunction: 'ease-in'
+	},
+	navbarShow: {
+		backgroundColor: '#16144a',
+		color: 'white',
+		transition: '0.6s',
+		transitionTimingFunction: 'ease-out'
 	},
 	sectionsLinks: {
 		display: 'flex',
 		listStyle: 'none',
 		paddingTop: '10px',
 		paddingBottom: '10px',
-		marginBottom: '0'
+		marginBottom: '0',
+		paddingLeft: '0',
+		'@media (max-width: 768px)': {
+			paddingBottom: '0'
+		}
 	},
 	sectionItem: {
 		padding: '5px 12px',
@@ -29,7 +41,9 @@ const useStyles = makeStyles({
 		color: 'white',
 		textDecoration: 'none',
 		'&.active': {
-			color: 'red'
+			border: '1px solid white',
+			borderRadius: '25px',
+			color: 'white'
 		}
 	},
 	sectionItem_active: {
@@ -39,16 +53,41 @@ const useStyles = makeStyles({
 		'&:hover': {
 			color: '#6c63ff'
 		}
+	},
+	navbarContent: {
+		display: 'flex',
+		justifyContent: 'items-center',
+		justifyContent: 'space-between',
+		width: '100%',
+		flexWrap: 'wrap',
+		'@media (max-width: 768px)': {
+			justifyContent: 'center'
+		}
+	},
+	iconBtn: {
+		marginRight: '0.25rem',
+		marginLeft: '0.25rem',
+		'@media (max-width: 580px)': {
+			paddingTop: '5px'
+		}
 	}
 });
 
 export default function Navbar() {
+	const [ navbar, setNavbar ] = useState(false);
+
 	const classes = useStyles();
 
+	const changeBck = () => {
+		window.scrollY >= 70 ? setNavbar(true) : setNavbar(false);
+	};
+
+	window.addEventListener('scroll', changeBck);
+
 	return (
-		<Ui.AppBar position="fixed" className={classes.navbar}>
+		<Ui.AppBar position="fixed" className={navbar ? classes.navbarShow : classes.navbar}>
 			<Ui.Toolbar>
-				<div className="d-flex align-items-center justify-content-between w-100">
+				<div className={classes.navbarContent}>
 					<ul className={classes.sectionsLinks}>
 						<Link className={classes.sectionItem} to={'top'} activeClass="active" spy={true}>
 							Home
@@ -63,7 +102,7 @@ export default function Navbar() {
 						<Ui.IconButton
 							edge="start"
 							color="inherit"
-							className="mx-1"
+							className={classes.iconBtn}
 							href="https://github.com/Jsalvadorpp"
 							target="_blank"
 						>
@@ -72,7 +111,7 @@ export default function Navbar() {
 						<Ui.IconButton
 							edge="start"
 							color="inherit"
-							className="mx-1"
+							className={classes.iconBtn}
 							href="https://www.linkedin.com/in/josesalvadorpp/"
 							target="_blank"
 						>
@@ -81,7 +120,7 @@ export default function Navbar() {
 						<Ui.IconButton
 							edge="start"
 							color="inherit"
-							className="mx-1"
+							className={classes.iconBtn}
 							href="https://www.linkedin.com/in/josesalvadorpp/"
 							target="_blank"
 						>
