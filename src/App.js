@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/styles';
 import MainBanner from './components/mainBanner';
 import AboutMe from './components/aboutMe';
 import NavBar from './components/navbar';
+import Footer from './components/footer';
 
 const useStyles = makeStyles({
 	rootWrapper: {
@@ -11,8 +12,9 @@ const useStyles = makeStyles({
 	},
 	particles: {
 		position: 'absolute',
-		height: '100%',
-		width: '100%'
+		height: '99.5%',
+		width: '100%',
+		zIndex: '-1'
 	}
 });
 
@@ -72,6 +74,8 @@ function App() {
 			<AboutMe />
 
 			<div style={{ height: '500px' }} />
+
+			<Footer />
 		</div>
 	);
 }
