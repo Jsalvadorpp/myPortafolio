@@ -95,7 +95,9 @@ export default function Navbar() {
 							About
 						</Link>
 						<Link className={classes.sectionItem}>Projects</Link>
-						<Link className={classes.sectionItem}>Contact</Link>
+						<Link className={classes.sectionItem} to={'contact'} activeClass="active" spy={true}>
+							Contact
+						</Link>
 					</ul>
 					<div>
 						<Ui.IconButton

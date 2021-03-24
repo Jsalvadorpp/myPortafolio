@@ -36,7 +36,12 @@ export default function Footer() {
 		<div className={classes.footer}>
 			<p className={classes.footerText}>
 				2021 - Made By{' '}
-				<a href="https://github.com/Jsalvadorpp/myPortafolio" target="_blank" className={classes.footerLink}>
+				<a
+					href="https://github.com/Jsalvadorpp/myPortafolio"
+					target="_blank"
+					className={classes.footerLink}
+					rel="noreferrer"
+				>
 					Jsalvadorpp
 				</a>
 			</p>
