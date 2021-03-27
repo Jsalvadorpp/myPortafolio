@@ -36,7 +36,7 @@ const useStyles = makeStyles({
 			borderRadius: '25px',
 			transition: '0.2s',
 			cursor: 'pointer',
-			color: 'white'
+			color: 'white !important'
 		},
 		color: 'white',
 		textDecoration: 'none',
@@ -94,7 +94,9 @@ export default function Navbar() {
 						<Link className={classes.sectionItem} to={'about'} activeClass="active" spy={true} offset={-60}>
 							About
 						</Link>
-						<Link className={classes.sectionItem}>Projects</Link>
+						<Link className={classes.sectionItem} to={'projects'} activeClass="active" spy={true}>
+							Projects
+						</Link>
 						<Link className={classes.sectionItem} to={'contact'} activeClass="active" spy={true}>
 							Contact
 						</Link>

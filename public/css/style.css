@@ -9,3 +9,6 @@ body {
 	background-color: #6c63ff;
 	margin: 20px 0;
 }
+a:hover {
+	color: #6c63ff !important;
+}

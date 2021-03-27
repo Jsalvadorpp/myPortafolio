@@ -75,7 +75,6 @@ function App() {
 			<MainBanner />
 			<AboutMe />
 			<Projects />
-			<div style={{ height: '500px' }} />
 			<Contact />
 			<Footer />
 		</div>
