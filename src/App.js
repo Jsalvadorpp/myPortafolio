@@ -6,6 +6,7 @@ import AboutMe from './components/aboutMe';
 import NavBar from './components/navbar';
 import Footer from './components/footer';
 import Contact from './components/contact';
+import Projects from './components/projects';
 
 const useStyles = makeStyles({
 	rootWrapper: {
@@ -73,7 +74,7 @@ function App() {
 			<NavBar />
 			<MainBanner />
 			<AboutMe />
-
+			<Projects />
 			<div style={{ height: '500px' }} />
 			<Contact />
 			<Footer />
