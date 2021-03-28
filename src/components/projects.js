@@ -148,7 +148,7 @@ export default function Projects() {
 			<div className="divider" />
 			<div className="row d-flex justify-content-center">
 				{projects.map((project) => (
-					<div className="col-md-4">
+					<div className="col-sm-12 col-md-6 col-lg-4 col-xl-4">
 						<ProjectCard project={project} openModal={() => showProject(project)} />
 					</div>
 				))}

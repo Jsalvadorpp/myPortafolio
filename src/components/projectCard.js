@@ -9,7 +9,8 @@ const useStyles = makeStyles({
 		backgroundColor: '#24202f',
 		color: 'white',
 		boxShadow: '3px 3px 10px 0.2px rgba(255, 252, 252, 0.33)',
-		marginBottom: '20px'
+		marginBottom: '20px',
+		height: '95%'
 	},
 	mainImage: {
 		width: '100%',
