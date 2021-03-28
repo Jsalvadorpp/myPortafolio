@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
-import * as Ui from '@material-ui/core';
-import * as Icon from '@material-ui/icons';
+import Carousel from 'react-material-ui-carousel';
 
 const useStyles = makeStyles({
 	card: {
@@ -59,7 +58,9 @@ export default function ProjectDetails(props) {
 	return (
 		<div className={classes.card}>
 			<div className="card-body">
-				<img src={project.images[0]} alt={project.name} className={classes.mainImage} />
+				<Carousel className={classes.slider}>
+					{project.images.map((img) => <img src={img} alt={project.name} className={classes.mainImage} />)}
+				</Carousel>
 
 				<p className={classes.name}>{project.name}</p>
 				<p className={classes.description}>{project.description}</p>

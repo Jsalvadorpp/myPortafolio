@@ -76,7 +76,7 @@ const projects = [
 		images: [
 			'/portafolio_images/AngularWeatherApp/image1.png',
 			'/portafolio_images/AngularWeatherApp/image2.png',
-			'/portafolio_images/AngularWeatherApp/image3.png'
+			'/portafolio_images/AngularWeatherApp/image3.jpg'
 		],
 		url: 'https://jsalvadorpp.github.io/weather-angular/',
 		github: 'https://github.com/Jsalvadorpp/weather-angular'
