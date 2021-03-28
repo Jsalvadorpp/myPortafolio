@@ -17,7 +17,8 @@ const useStyles = makeStyles({
 const projects = [
 	{
 		name: 'Cloud Pos',
-		description: 'Is a POS (point of sale) system where users can keep track of sales , profits , customers , etc.',
+		description:
+			"is  a POS (point of sale) system available as a web application and mobile app . It is a system to manage, control and measure a user's business . the user can keep track of Sales, Profits, Customers, etc. I was in charge on building the interface of the web app version using React.js",
 		tecnologies: [ 'React.js', 'Node.js', 'MySQL' ],
 		images: [
 			'/portafolio_images/CloudPos/image1.jpg',
@@ -32,7 +33,7 @@ const projects = [
 	{
 		name: 'Mi Compra Venta',
 		description:
-			'In this site companies can publish what products they want to buy, and others can offer their products',
+			"Is a site aimed at companies in Latin America. It's like a reverse Ebay where companies can publish what products they want to buy, and others can offer their products.",
 		tecnologies: [ 'Bootstrap', 'Node.js', 'MongoDB' ],
 		images: [
 			'/portafolio_images/MiCompraVenta/image1.jpg',
@@ -46,7 +47,7 @@ const projects = [
 	{
 		name: 'Vive Recuerdos',
 		description:
-			'Website dedicated to the creation and storage of obituaries and tributes of loved ones located in Peru',
+			'is a website dedicated to the creation and storage of obituaries and tributes of loved ones located in Peru, includes payments through Paypal, also the users can make custom flowers arrangements and publish it',
 		tecnologies: [ 'Bootstrap', 'Node.js', 'MongoDB' ],
 		images: [
 			'/portafolio_images/viveRecuerdos/image1.jpg',
@@ -59,7 +60,8 @@ const projects = [
 	},
 	{
 		name: 'Felcas Auto Partes',
-		description: "It's selling auto parts website",
+		description:
+			"It's selling auto parts website for a store located in Venezuela. Includes an admin panel where admins can publish news , add new categories , import products with an excel file, etc.",
 		tecnologies: [ 'HTML', 'PHP', 'MySQL' ],
 		images: [
 			'/portafolio_images/FelcasAutoPartes/image1.jpg',
@@ -71,7 +73,8 @@ const projects = [
 	},
 	{
 		name: 'Angular Weather App',
-		description: 'Weather app using Angular, openweathermap and Algolia places api.',
+		description:
+			'Weather app using Angular, openweathermap api to get the weather and Algolia places api for address search autocomplete.',
 		tecnologies: [ 'Angular', 'Javascript' ],
 		images: [
 			'/portafolio_images/AngularWeatherApp/image1.png',
@@ -83,7 +86,8 @@ const projects = [
 	},
 	{
 		name: 'Unexpo Cloud',
-		description: 'Website destined to the storage of academic support material related to Electronic Engineering ',
+		description:
+			"It's a website destined to the storage of academic support material related to Electronic Engineering for the free use of students and professors, especially of the University UNEXPO VR-BQTO.",
 		tecnologies: [ 'Node.js', 'Express.js', 'MongoDB' ],
 		images: [
 			'/portafolio_images/unexpoCloud/image1.png',
@@ -96,14 +100,16 @@ const projects = [
 	},
 	{
 		name: 'My portafolio',
-		description: 'this website',
+		description:
+			'A simple portafolio website made with React.js , Material-Ui framework, to showcase my projects and my experience in Web development',
 		tecnologies: [ 'React.js', 'Javascript' ],
 		images: [ '/portafolio_images/MyPortafolio/image1.png' ],
 		github: 'https://github.com/Jsalvadorpp/myPortafolio'
 	},
 	{
 		name: 'Chess Ruby',
-		description: 'Command Line Ruby Chess Game',
+		description:
+			'Command Line Ruby Chess Game, for two players. Features: validates player input, does not allow the player to make ilegal moves',
 		tecnologies: [ 'Ruby' ],
 		images: [ '/portafolio_images/ChessRuby/image1.png' ],
 		github: 'https://github.com/Jsalvadorpp/chess-game'
