@@ -44,6 +44,50 @@ const useStyles = makeStyles({
 		},
 		paddingRight: '0',
 		paddingLeft: '0'
+	},
+	imgWrapper: {
+		position: 'relative',
+		width: '100%',
+		height: '220px',
+		marginBottom: '20px'
+	},
+	imgOverlay: {
+		position: 'absolute',
+		top: '0',
+		left: '0',
+		width: '100%',
+		height: '100%',
+		backgroundColor: 'rgba(0, 0, 0, 0.95)',
+		color: '#6c63ff',
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+		opacity: '0',
+		transition: 'opacity 0.32s',
+		'& > *': {
+			transform: 'translateY(60px)',
+			transition: 'transform 0.32s'
+		},
+		'&:hover': {
+			opacity: '1'
+		},
+		'&:hover > *': {
+			transform: 'translateY(0)'
+		}
+	},
+	seeMore: {
+		color: '#6c63ff',
+		padding: '5px 12px',
+		border: '1px solid #6c63ff',
+		borderRadius: '15px',
+		fontSize: '1.2rem',
+		fontWeight: 'bold',
+		'&:hover': {
+			cursor: 'pointer',
+			border: '1px solid white',
+			color: 'white',
+			backgroundColor: '#16144a'
+		}
 	}
 });
 
@@ -55,9 +99,14 @@ export default function ProjectCard(props) {
 	return (
 		<div className={[ 'card', classes.card ].join(' ')}>
 			<div className="card-body">
-				<img src={project.images[0]} alt={project.name} className={classes.mainImage} />
+				<div className={classes.imgWrapper}>
+					<img src={project.images[0]} alt={project.name} className={classes.mainImage} />
+					<div className={classes.imgOverlay}>
+						<span className={classes.seeMore}>View More</span>
+					</div>
+				</div>
+
 				<p className={classes.name}>{project.name}</p>
-				{/* <p className={classes.description}>{project.description}</p> */}
 				<div className="d-flex flex-wrap justify-content-between align-items-center">
 					<div className="d-flex flex-wrap">
 						{project.tecnologies.map((name) => <span className={classes.tecnology}>{name}</span>)}
@@ -97,10 +146,3 @@ export default function ProjectCard(props) {
 		</div>
 	);
 }
-
-const trucateTxt = (string) => {
-	if (string.length > 60) {
-		return string.substring(0, 60) + '...';
-	}
-	return string;
-};
