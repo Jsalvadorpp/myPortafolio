@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/styles';
 import ProjectCard from './projectCard';
+import 'react-responsive-modal/styles.css';
+import { Modal } from 'react-responsive-modal';
+import ProjectDetails from './projectDetails';
 
 const useStyles = makeStyles({
 	projectsSection: {
@@ -110,8 +113,29 @@ const projects = [
 export default function Projects() {
 	const classes = useStyles();
 
+	//states
+	const [ open, setOpen ] = useState(false);
+	const [ currentProject, setCurrentProject ] = useState({
+		name: '',
+		description: '',
+		tecnologies: [],
+		images: []
+	});
+
+	const onOpenModal = () => setOpen(true);
+	const onCloseModal = () => setOpen(false);
+
+	const showProject = (project) => {
+		setCurrentProject(project);
+		onOpenModal();
+	};
+
 	return (
 		<div className={classes.projectsSection} id="projects">
+			<Modal open={open} onClose={onCloseModal} center blockScroll={false}>
+				<ProjectDetails project={currentProject} />
+			</Modal>
+
 			<h1 className="mb-0">
 				<strong>Projects</strong>
 			</h1>
@@ -119,7 +143,7 @@ export default function Projects() {
 			<div className="row d-flex justify-content-center">
 				{projects.map((project) => (
 					<div className="col-md-4">
-						<ProjectCard project={project} />
+						<ProjectCard project={project} openModal={() => showProject(project)} />
 					</div>
 				))}
 			</div>

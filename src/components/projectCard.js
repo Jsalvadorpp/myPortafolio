@@ -92,7 +92,7 @@ const useStyles = makeStyles({
 });
 
 export default function ProjectCard(props) {
-	const { project } = props;
+	const { project, openModal } = props;
 	console.log(project.tecnologies);
 	const classes = useStyles();
 
@@ -102,7 +102,9 @@ export default function ProjectCard(props) {
 				<div className={classes.imgWrapper}>
 					<img src={project.images[0]} alt={project.name} className={classes.mainImage} />
 					<div className={classes.imgOverlay}>
-						<span className={classes.seeMore}>View More</span>
+						<span className={classes.seeMore} onClick={openModal}>
+							View More
+						</span>
 					</div>
 				</div>
 
