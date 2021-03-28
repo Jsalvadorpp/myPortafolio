@@ -10,7 +10,8 @@ const useStyles = makeStyles({
 	},
 	aboutImage: {
 		width: '80%',
-		minWidth: '220px'
+		minWidth: '220px',
+		maxWidth: '600px'
 	}
 });
 
