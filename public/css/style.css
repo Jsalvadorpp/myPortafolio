@@ -16,3 +16,6 @@ a:hover {
 	max-width: 1250px !important;
 	padding: 0 !important;
 }
+a:focus-visible {
+	outline: none !important;
+}

@@ -35,6 +35,20 @@ const useStyles = makeStyles({
 		},
 		paddingRight: '0',
 		paddingLeft: '0'
+	},
+	linkBtn: {
+		marginRight: '10px',
+		border: '1px solid white',
+		borderRadius: '15px',
+		padding: '4px 12px',
+		color: 'white',
+		transition: '0.32s',
+		textDecoration: 'none',
+		'&:hover': {
+			color: '#6c63ff',
+			borderColor: '#6c63ff',
+			cursor: 'pointer'
+		}
 	}
 });
 
@@ -52,29 +66,17 @@ export default function ProjectDetails(props) {
 				<div className="d-flex flex-wrap justify-content-between align-items-center">
 					<div>
 						{project.github ? (
-							<Ui.IconButton
-								edge="start"
-								color="inherit"
-								className={classes.iconBtn}
-								href={project.github}
-								target="_blank"
-							>
-								<Icon.GitHub className={classes.icon} />
-							</Ui.IconButton>
+							<a className={classes.linkBtn} href={project.github}>
+								Code
+							</a>
 						) : (
 							''
 						)}
 
 						{project.url ? (
-							<Ui.IconButton
-								edge="start"
-								color="inherit"
-								className={classes.iconBtn}
-								href={project.url}
-								target="_blank"
-							>
-								<Icon.Language className={classes.icon} />
-							</Ui.IconButton>
+							<a className={classes.linkBtn} href={project.url}>
+								Website
+							</a>
 						) : (
 							''
 						)}
