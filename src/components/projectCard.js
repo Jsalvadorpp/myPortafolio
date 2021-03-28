@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import * as Ui from '@material-ui/core';
 import * as Icon from '@material-ui/icons';
+import Zoom from 'react-reveal/Zoom';
 
 const useStyles = makeStyles({
 	card: {
@@ -57,7 +58,7 @@ const useStyles = makeStyles({
 		left: '0',
 		width: '100%',
 		height: '100%',
-		backgroundColor: 'rgba(0, 0, 0, 0.95)',
+		backgroundColor: 'rgba(0, 0, 0, 0.92)',
 		color: '#6c63ff',
 		display: 'flex',
 		justifyContent: 'center',
@@ -97,54 +98,56 @@ export default function ProjectCard(props) {
 	const classes = useStyles();
 
 	return (
-		<div className={[ 'card', classes.card ].join(' ')}>
-			<div className="card-body">
-				<div className={classes.imgWrapper}>
-					<img src={project.images[0]} alt={project.name} className={classes.mainImage} />
-					<div className={classes.imgOverlay}>
-						<span className={classes.seeMore} onClick={openModal}>
-							View More
-						</span>
-					</div>
-				</div>
-
-				<p className={classes.name}>{project.name}</p>
-				<div className="d-flex flex-wrap justify-content-between align-items-center">
-					<div className="d-flex flex-wrap">
-						{project.tecnologies.map((name) => <span className={classes.tecnology}>{name}</span>)}
+		<Zoom>
+			<div className={[ 'card', classes.card ].join(' ')}>
+				<div className="card-body">
+					<div className={classes.imgWrapper}>
+						<img src={project.images[0]} alt={project.name} className={classes.mainImage} />
+						<div className={classes.imgOverlay}>
+							<span className={classes.seeMore} onClick={openModal}>
+								View More
+							</span>
+						</div>
 					</div>
 
-					<div>
-						{project.github ? (
-							<Ui.IconButton
-								edge="start"
-								color="inherit"
-								className={classes.iconBtn}
-								href={project.github}
-								target="_blank"
-							>
-								<Icon.GitHub className={classes.icon} />
-							</Ui.IconButton>
-						) : (
-							''
-						)}
+					<p className={classes.name}>{project.name}</p>
+					<div className="d-flex flex-wrap justify-content-between align-items-center">
+						<div className="d-flex flex-wrap">
+							{project.tecnologies.map((name) => <span className={classes.tecnology}>{name}</span>)}
+						</div>
 
-						{project.url ? (
-							<Ui.IconButton
-								edge="start"
-								color="inherit"
-								className={classes.iconBtn}
-								href={project.url}
-								target="_blank"
-							>
-								<Icon.Language className={classes.icon} />
-							</Ui.IconButton>
-						) : (
-							''
-						)}
+						<div>
+							{project.github ? (
+								<Ui.IconButton
+									edge="start"
+									color="inherit"
+									className={classes.iconBtn}
+									href={project.github}
+									target="_blank"
+								>
+									<Icon.GitHub className={classes.icon} />
+								</Ui.IconButton>
+							) : (
+								''
+							)}
+
+							{project.url ? (
+								<Ui.IconButton
+									edge="start"
+									color="inherit"
+									className={classes.iconBtn}
+									href={project.url}
+									target="_blank"
+								>
+									<Icon.Language className={classes.icon} />
+								</Ui.IconButton>
+							) : (
+								''
+							)}
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</Zoom>
 	);
 }
