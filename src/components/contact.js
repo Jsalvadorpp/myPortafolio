@@ -16,7 +16,7 @@ const useStyles = makeStyles({
 			background: '#0a58ca14',
 			borderRadius: '25px',
 			borderColor: 'white',
-			color: 'white'
+			color: 'white !important'
 		}
 	},
 	infoText: {
