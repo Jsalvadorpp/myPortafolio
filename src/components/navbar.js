@@ -124,7 +124,7 @@ export default function Navbar() {
 							edge="start"
 							color="inherit"
 							className={classes.iconBtn}
-							href="https://www.linkedin.com/in/josesalvadorpp/"
+							href="/resume/resume.pdf"
 							target="_blank"
 						>
 							<Icon.Description className={classes.icon} />
